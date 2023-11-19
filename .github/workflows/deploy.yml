@@ -1,4 +1,4 @@
-name: Manually deploy a version via commit SHA
+name: Deploy a specified commit
 
 on:
   workflow_dispatch:
