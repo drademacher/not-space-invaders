@@ -11,6 +11,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: drademacher/not-space-invaders/.github/workflows/setup.yml
+    - uses: drademacher/not-space-invaders/.github/workflows/setup.yml@main
 
     - run: bun run test
