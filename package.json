@@ -2,8 +2,7 @@
   "license": "",
   "scripts": {
     "start": "webpack serve --mode=development",
-    "distribute": "run-s clean distribute-only",
-    "distribute-only": "webpack --mode=production",
+    "build": "webpack --mode=production",
     "clean": "rimraf dist"
   },
   "dependencies": {

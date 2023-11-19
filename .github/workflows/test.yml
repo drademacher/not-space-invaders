@@ -1,4 +1,4 @@
-name: Running tests
+name: Test
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
+  init:
     runs-on: ubuntu-latest
 
     steps:
@@ -15,8 +15,10 @@ jobs:
 
     - uses: oven-sh/setup-bun@v1
 
-    - name: Install depdendencies  
-      run: bun install
+    - run: bun install
 
-    - name: Test
-      run: bun test
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - run: bun run test

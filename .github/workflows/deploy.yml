@@ -1,0 +1,34 @@
+name: Deploying
+
+on:
+  workflow_dispatch
+
+jobs:
+  init:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - uses: oven-sh/setup-bun@v1
+
+    - run: bun install
+
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - run: bun run test
+
+  deploy:
+    runs-on: ubuntu-latest
+  
+    steps:
+      - name: Distribute
+        run: bun run build
+  
+      - name: Deploy to GH Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: dist
