@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - uses: drademacher/not-space-invaders/.github/workflows/setup.yml@main
+      - uses: drademacher/not-space-invaders/.github/actions/init@main
 
       - run: bun run build
   
