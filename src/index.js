@@ -1,15 +1,15 @@
 import { Application, Sprite } from 'pixi.js'
 
 const app = new Application({
-	view: document.getElementById("pixi-canvas") as HTMLCanvasElement,
+	view: document.getElementById("pixi-canvas"),
 	resolution: window.devicePixelRatio || 1,
 	autoDensity: true,
-	backgroundColor: 0x525252,
+	backgroundColor: 0xeb4034,
 	width: 640,
 	height: 480
 });
 
-const logo: Sprite = Sprite.from("testing.png");
+const logo = Sprite.from("testing.png");
 
 logo.anchor.set(0.5);
 
