@@ -1,7 +1,12 @@
-name: Deploy
+name: Manually deploy a version via commit SHA
 
 on:
-  workflow_dispatch
+  workflow_dispatch:
+    inputs:
+      commitsha:
+        description: 'SHA hash of commit'
+        required: true
+        type: string
 
 jobs:
   deploy:
@@ -9,6 +14,8 @@ jobs:
     
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.commitsha }} 
 
       - uses: oven-sh/setup-bun@v1
     
