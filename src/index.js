@@ -1,12 +1,12 @@
-import { Application, Sprite } from 'pixi.js'
+import { Application, Sprite } from "pixi.js";
 
 const app = new Application({
-	view: document.getElementById("pixi-canvas"),
-	resolution: window.devicePixelRatio || 1,
-	autoDensity: true,
-	backgroundColor: 0xeb4034,
-	width: 640,
-	height: 480
+  view: document.getElementById("pixi-canvas"),
+  resolution: window.devicePixelRatio || 1,
+  autoDensity: true,
+  backgroundColor: 0xa7de1b,
+  width: 640,
+  height: 480,
 });
 
 const logo = Sprite.from("testing.png");
