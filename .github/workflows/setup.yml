@@ -1,4 +1,4 @@
-name: Test
+name: Setup
 
 on:
   push:
@@ -11,6 +11,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: drademacher/not-space-invaders/.github/workflows/setup.yml
+    - uses: actions/checkout@v4
 
-    - run: bun run test
+    - uses: oven-sh/setup-bun@v1
+
+    - run: bun install
